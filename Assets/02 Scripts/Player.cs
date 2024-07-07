@@ -1,4 +1,6 @@
 
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -98,18 +100,29 @@ public class Player : MonoBehaviour
 
     public void LoseLife()
     {
-        playerLives -= 1;
-        UIController.Instance.UpdateLife(playerLives);
-        if (playerLives < 0)
+        if (playerLives == 0)
         {
-            GameManager.Instance.EndGame();
+            StartCoroutine(Die());
         }
+        else
+        {
+            playerLives -= 1;
+            UIController.Instance.UpdateLife(playerLives);
+        }
+    }
+
+    IEnumerator Die()
+    {
+        animator.Play("Death");
+        yield return new WaitForSeconds(1f);
+        GameManager.Instance.EndGame();
     }
 
     public void SetStartPosition()
     {
-        transform.SetLocalPositionAndRotation(startPosition.position, Quaternion.identity);
+        transform.position = startPosition.position;
         rb.velocity = Vector2.zero;
         isMoving = false;
+        animator.Play("Idle");
     }
 }

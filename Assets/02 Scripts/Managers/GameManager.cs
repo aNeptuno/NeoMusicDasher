@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -148,5 +149,19 @@ public class GameManager : MonoBehaviour
         spawnRate = 1.5f;
     }
 
-
+    public void SpawnNotesParticles(ParticleSystem noteParticles, Transform noteTransform)
+    {
+        StartCoroutine(SpawnAndDestroyNotesParticles(noteParticles, noteTransform));
+    }
+    IEnumerator SpawnAndDestroyNotesParticles(ParticleSystem noteParticles, Transform noteTransform)
+    {
+        ParticleSystem particlesInstance = Instantiate(noteParticles, noteTransform.position, Quaternion.Euler(-90, 0, 0));
+        yield return new WaitForSeconds(2f);
+        particlesInstance.Stop();
+        while (particlesInstance.IsAlive())
+        {
+            yield return null;
+        }
+        Destroy(particlesInstance.gameObject);
+    }
 }

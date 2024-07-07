@@ -7,6 +7,8 @@ public class Note : MonoBehaviour
     public bool isWrongNote;
     [SerializeField] private GameObject note;
 
+    [SerializeField] private ParticleSystem noteParticles;
+
     void Start()
     {
         if (isWrongNote) note.SetActive(false);
@@ -36,6 +38,7 @@ public class Note : MonoBehaviour
                 }
                 else
                 {
+                    GameManager.Instance.SpawnNotesParticles(noteParticles, transform);
                     GameManager.Instance.UpdateScore(200);
                     AudioManager.Instance.PlayNote();
                 }

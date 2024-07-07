@@ -29,6 +29,8 @@ public class AudioManager : MonoBehaviour
 
     public float volumeMultiplier = 5.0f;
 
+    public int lastNoteIndex = -1;
+
     void Start()
     {
         PlayTrack(currentTrackIndex);
@@ -74,6 +76,16 @@ public class AudioManager : MonoBehaviour
         //MyDebugLog.Instance.MyDebugFunc("SFX: ",name);
 
         int index = Random.Range(0, noteSounds.Length);
+
+        if (lastNoteIndex  == -1)
+            lastNoteIndex = index;
+        else if (lastNoteIndex == index)
+        {
+            if (index == noteSounds.Length - 1)
+                index--;
+            else
+                index++;
+        }
 
         Sound s = noteSounds[index];
         if (s != null)

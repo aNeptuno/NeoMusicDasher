@@ -1023,7 +1023,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.3292009, y: 0.02507925}
+  m_Offset: {x: -1.5268534, y: 0.02507925}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1034,7 +1034,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.1239321, y: 13.010158}
+  m_Size: {x: 2.5192373, y: 13.010158}
   m_EdgeRadius: 0
 --- !u!61 &281083913
 BoxCollider2D:
@@ -1068,7 +1068,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -10.633589, y: 0}
+  m_Offset: {x: -10.302591, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1079,7 +1079,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7728233, y: 12.959999}
+  m_Size: {x: 2.4348173, y: 12.959999}
   m_EdgeRadius: 0
 --- !u!4 &281083914
 Transform:
@@ -1131,7 +1131,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -11, y: -37.768}
+  m_AnchoredPosition: {x: -11, y: -37.767944}
   m_SizeDelta: {x: -191.885, y: -921.842}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &429781424
@@ -1759,6 +1759,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 720381711}
+  - component: {fileID: 720381712}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -1781,6 +1782,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1709280256}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &720381712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720381710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed12485ffed360499beb15b9f679ae9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &878894499
 GameObject:
   m_ObjectHideFlags: 0
@@ -2266,7 +2279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1236502478
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3645,6 +3658,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: c070490bc16f6164299a041e8f6fddc7, type: 3}
   - soundName: Drums4
     clip: {fileID: 8300000, guid: b533526f9e664304ea07f93e15f087ac, type: 3}
+  - soundName: Guitar
+    clip: {fileID: 8300000, guid: 2d3391b940b8f094788e0286203c6bab, type: 3}
+  - soundName: Guitar
+    clip: {fileID: 8300000, guid: 2d3391b940b8f094788e0286203c6bab, type: 3}
   - soundName: Guitar
     clip: {fileID: 8300000, guid: 2d3391b940b8f094788e0286203c6bab, type: 3}
   wrongSound:

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5691795840374015323}
   - component: {fileID: 4900942299129024647}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Note
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4111484099263501028}
   - component: {fileID: 3804670046264901829}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 1272231704671414900}
   - component: {fileID: 8815716156669583738}
   - component: {fileID: 2954667524085315435}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Note
   m_TagString: Note
   m_Icon: {fileID: 0}
@@ -316,3 +316,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isWrongNote: 0
   note: {fileID: 979774017434794914}
+  noteParticles: {fileID: 7998618189616015342, guid: 2c4882c3aa5927e4686bedece267b7f8, type: 3}

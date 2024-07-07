@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
@@ -80,6 +81,8 @@ public class UIController : MonoBehaviour
         EndUI.SetActive(false);
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayButton();
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
     }
 
     public void ShowFinalStats(int score, int time)
