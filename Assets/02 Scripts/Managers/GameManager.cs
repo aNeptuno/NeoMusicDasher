@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
 
     private void NextLevel()
     {
-        UIController.Instance.Fade();
+        UIController.Instance.Fade(true);
         spawnRate = 1.5f;
         spawnRate -= .5f;
         if (spawnRate < 0) spawnRate = 0;

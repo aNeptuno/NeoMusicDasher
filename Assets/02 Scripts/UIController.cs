@@ -28,6 +28,8 @@ public class UIController : MonoBehaviour
 
     public GameObject FadeUI;
 
+    public GameObject FadeUINextLevel;
+
     public TextMeshProUGUI playerScore;
 
     public TextMeshProUGUI playerLife;
@@ -93,17 +95,21 @@ public class UIController : MonoBehaviour
         gameTimeEnd.text = time.ToString();
     }
 
-    public void Fade()
+    public void Fade(bool NextLevel)
     {
-        StartCoroutine(Fading());
+        StartCoroutine(Fading(NextLevel));
     }
 
-    IEnumerator Fading()
+    IEnumerator Fading(bool NextLevel)
     {
         Player.Instance.canLoseLife = false;
         FadeUI.SetActive(true);
+        if (NextLevel)
+            FadeUINextLevel.SetActive(true);
         yield return new WaitForSeconds(2f);
         FadeUI.SetActive(false);
+        if (NextLevel)
+            FadeUINextLevel.SetActive(false);
         yield return new WaitForSeconds(0.5f);
         Player.Instance.canLoseLife = true;
     }
