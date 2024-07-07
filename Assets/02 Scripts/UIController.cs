@@ -83,6 +83,7 @@ public class UIController : MonoBehaviour
             AudioManager.Instance.PlayButton();
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.name);
+        AudioManager.Instance.currentTrackIndex = 0;
     }
 
     public void ShowFinalStats(int score, int time)

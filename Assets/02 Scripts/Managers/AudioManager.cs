@@ -73,8 +73,6 @@ public class AudioManager : MonoBehaviour
 
     public void PlayNote()
     {
-        //MyDebugLog.Instance.MyDebugFunc("SFX: ",name);
-
         int index = Random.Range(0, noteSounds.Length);
 
         if (lastNoteIndex  == -1)

@@ -49,6 +49,7 @@ public class Note : MonoBehaviour
 
     IEnumerator WaitAndDestroy()
     {
+        if (!isWrongNote) GameManager.Instance.UpdateScore(-10);
         yield return new WaitForSeconds(0.2f);
         Destroy(gameObject);
     }

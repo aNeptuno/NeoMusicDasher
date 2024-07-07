@@ -1736,7 +1736,7 @@ MonoBehaviour:
   - {fileID: 1697250361130288189, guid: 4d8a549fce44f6943ab6d5d69d6e1794, type: 3}
   - {fileID: 1697250361130288189, guid: 31f2eef02a6f26a4c85e0b6aa4f4ddb6, type: 3}
   - {fileID: 1697250361130288189, guid: 4b106136de30ddb47a913f61a4b6612b, type: 3}
-  maxX: 2.5
+  maxX: 2.4
   spawnPoint: {fileID: 720381711}
   spawnRate: 2
   gameStarted: 0
@@ -3646,24 +3646,24 @@ MonoBehaviour:
   noteSounds:
   - soundName: Bass1
     clip: {fileID: 8300000, guid: 19031d6b45c8d6640827c49ffa512d9e, type: 3}
+  - soundName: Guitar
+    clip: {fileID: 8300000, guid: 2d3391b940b8f094788e0286203c6bab, type: 3}
   - soundName: Bass2
     clip: {fileID: 8300000, guid: 05c70b3e16c166b4d92307172f620107, type: 3}
-  - soundName: Bass3
-    clip: {fileID: 8300000, guid: 4c43c28ffca55c948aa8b1ef6259b564, type: 3}
   - soundName: Drums1
     clip: {fileID: 8300000, guid: 0f92b7bb3fe47b44ea132cf21e32dc2d, type: 3}
+  - soundName: Bass3
+    clip: {fileID: 8300000, guid: 4c43c28ffca55c948aa8b1ef6259b564, type: 3}
+  - soundName: Guitar
+    clip: {fileID: 8300000, guid: 2d3391b940b8f094788e0286203c6bab, type: 3}
   - soundName: Drums2
     clip: {fileID: 8300000, guid: d8db5bfc11d262e4b9ec01545affb1ce, type: 3}
+  - soundName: Guitar
+    clip: {fileID: 8300000, guid: 2d3391b940b8f094788e0286203c6bab, type: 3}
   - soundName: Drums3
     clip: {fileID: 8300000, guid: c070490bc16f6164299a041e8f6fddc7, type: 3}
   - soundName: Drums4
     clip: {fileID: 8300000, guid: b533526f9e664304ea07f93e15f087ac, type: 3}
-  - soundName: Guitar
-    clip: {fileID: 8300000, guid: 2d3391b940b8f094788e0286203c6bab, type: 3}
-  - soundName: Guitar
-    clip: {fileID: 8300000, guid: 2d3391b940b8f094788e0286203c6bab, type: 3}
-  - soundName: Guitar
-    clip: {fileID: 8300000, guid: 2d3391b940b8f094788e0286203c6bab, type: 3}
   wrongSound:
   - soundName: Wrong
     clip: {fileID: 8300000, guid: 8b1742335ce9d55469a222b6e03b171d, type: 3}
@@ -3676,6 +3676,7 @@ MonoBehaviour:
   buttonSource: {fileID: 1672614587}
   currentTrackIndex: 0
   volumeMultiplier: 5
+  lastNoteIndex: -1
 --- !u!1 &1694344660
 GameObject:
   m_ObjectHideFlags: 0
