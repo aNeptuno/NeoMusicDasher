@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> notes;
     public float maxX;
     public Transform spawnPoint;
-    public float spawnRate = 1.5f;
+    private float spawnRate = 1.5f;
 
     public bool gameStarted = false;
 
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            if (displayedTime == 20 * gameDificulty)
+            if (displayedTime > 20 * gameDificulty)
             {
                 if (spawnRate == 0f)
                     NextLevel();
@@ -69,20 +69,19 @@ public class GameManager : MonoBehaviour
     private void NextLevel()
     {
         UIController.Instance.Fade();
-        gameDificulty = 1;
         spawnRate = 1.5f;
         spawnRate -= .5f;
         if (spawnRate < 0) spawnRate = 0;
         AudioManager.Instance.PlayNextTrack();
-        int newIndex = Random.Range(0, bgSprites.Count);
+        int newIndex = Random.Range(1, bgSprites.Count);
         if (newIndex == currentSpriteIndex)
         {
             if (currentSpriteIndex == bgSprites.Count - 1)
                 newIndex--;
             else
                 newIndex++;
-            currentSpriteIndex = newIndex;
         }
+        currentSpriteIndex = newIndex;
         background.GetComponent<SpriteRenderer>().sprite = bgSprites[currentSpriteIndex];
     }
 
@@ -147,6 +146,8 @@ public class GameManager : MonoBehaviour
         time = 0;
         displayedTime = 0;
         spawnRate = 1.5f;
+        currentSpriteIndex = 0;
+        background.GetComponent<SpriteRenderer>().sprite = bgSprites[currentSpriteIndex];
     }
 
     public void SpawnNotesParticles(ParticleSystem noteParticles, Transform noteTransform)

@@ -39,17 +39,21 @@ public class Note : MonoBehaviour
                 else
                 {
                     GameManager.Instance.SpawnNotesParticles(noteParticles, transform);
-                    GameManager.Instance.UpdateScore(200);
+                    GameManager.Instance.UpdateScore(150);
                     AudioManager.Instance.PlayNote();
                 }
-                StartCoroutine(WaitAndDestroy());
+                Destroy(gameObject);
             }
         }
     }
 
     IEnumerator WaitAndDestroy()
     {
-        if (!isWrongNote) GameManager.Instance.UpdateScore(-10);
+        if (!isWrongNote)
+        {
+            AudioManager.Instance.PlayWrong();
+            GameManager.Instance.UpdateScore(-10);
+        }
         yield return new WaitForSeconds(0.2f);
         Destroy(gameObject);
     }

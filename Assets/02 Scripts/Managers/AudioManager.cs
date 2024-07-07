@@ -83,6 +83,7 @@ public class AudioManager : MonoBehaviour
                 index--;
             else
                 index++;
+            lastNoteIndex = index;
         }
 
         Sound s = noteSounds[index];
@@ -103,7 +104,7 @@ public class AudioManager : MonoBehaviour
         if (s != null)
         {
             wrongSource.clip = s.clip;
-            if (!wrongSource.isPlaying)
+            if (wrongSource.isPlaying) wrongSource.Stop();
                 wrongSource.Play();
         }
     }

@@ -1736,12 +1736,12 @@ MonoBehaviour:
   - {fileID: 1697250361130288189, guid: 4d8a549fce44f6943ab6d5d69d6e1794, type: 3}
   - {fileID: 1697250361130288189, guid: 31f2eef02a6f26a4c85e0b6aa4f4ddb6, type: 3}
   - {fileID: 1697250361130288189, guid: 4b106136de30ddb47a913f61a4b6612b, type: 3}
-  maxX: 2.4
+  maxX: 2
   spawnPoint: {fileID: 720381711}
-  spawnRate: 2
   gameStarted: 0
   background: {fileID: 878894499}
   bgSprites:
+  - {fileID: 21300000, guid: 5246fab063c7d0f48a54b09d4fdda30d, type: 3}
   - {fileID: 21300000, guid: 8fa39df29f76da34094aea68527e0a31, type: 3}
   - {fileID: 21300000, guid: a78462f04c582b64e8e8c24a7710ad24, type: 3}
   - {fileID: 21300000, guid: 31578452a528c5f42bb5c346a1177514, type: 3}
