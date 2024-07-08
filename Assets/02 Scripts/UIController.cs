@@ -78,13 +78,12 @@ public class UIController : MonoBehaviour
 
     public void PlayAgain()
     {
+        ResetUI();
         UI.SetActive(true);
         StatsInfo.SetActive(false);
         EndUI.SetActive(false);
         if (AudioManager.Instance != null)
             AudioManager.Instance.PlayButton();
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
         AudioManager.Instance.currentTrackIndex = 0;
     }
 
@@ -93,6 +92,13 @@ public class UIController : MonoBehaviour
         EndUI.SetActive(true);
         playerScoreEnd.text = score.ToString();
         gameTimeEnd.text = time.ToString();
+    }
+
+    private void ResetUI()
+    {
+        playerScore.text = "0";
+        gameTime.text = "0";
+        playerLife.text = "5";
     }
 
     public void Fade(bool NextLevel)

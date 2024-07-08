@@ -119,10 +119,6 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         gameStarted = true;
-        UpdateScore(playerScore);
-        UIController.Instance.UpdateTime(displayedTime);
-        UIController.Instance.UpdateLife(3);
-
         StartSpawning();
     }
 
@@ -138,9 +134,13 @@ public class GameManager : MonoBehaviour
     {
         CancelInvoke("SpawnWrongNote");
         CancelInvoke("SpawnNote");
-        Player.Instance.playerLives = 3;
-        Player.Instance.SetStartPosition();
         UIController.Instance.ShowFinalStats(playerScore, displayedTime);
+        ResetGameData();
+        Player.Instance.ResetPlayerData();
+    }
+
+    private void ResetGameData()
+    {
         gameStarted = false;
         playerScore = 0;
         time = 0;

@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     private bool isMoving = false;
     private bool canMove;
 
-    public int playerLives = 3;
+    public int playerLives = 5;
 
     public bool canLoseLife;
 
@@ -118,11 +118,14 @@ public class Player : MonoBehaviour
         GameManager.Instance.EndGame();
     }
 
-    public void SetStartPosition()
+    public void ResetPlayerData()
     {
         transform.position = startPosition.position;
         rb.velocity = Vector2.zero;
         isMoving = false;
+        canMove = false;
+        canLoseLife = false;
+        playerLives = 5;
         animator.Play("Idle");
     }
 }
