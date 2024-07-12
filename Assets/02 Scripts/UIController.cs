@@ -98,7 +98,7 @@ public class UIController : MonoBehaviour
     {
         playerScore.text = "0";
         gameTime.text = "0";
-        playerLife.text = "5";
+        playerLife.text = "3";
     }
 
     public void Fade(bool NextLevel)
