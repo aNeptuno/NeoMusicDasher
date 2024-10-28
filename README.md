@@ -7,8 +7,8 @@
 
 <p align="center">
   Neo Music Dasher is a 2D cyberpunk-themed game developed with Unity for Android. <br><br>
-  Prepare for a unique experience where music and action merge in a cyberpunk world! <br>
-  Your goal is to dodge the circles and to catch the notes falling from above. <br> Collect notes and merge with the music. :)<br><br>
+  Music and action merged in a cyberpunk world. <br>
+  Your goal is to dodge the circles and to catch the notes falling from above. <br> Collect notes and merge with the music.<br><br>
   🎮<a href="https://www.youtube.com/watch?v=XTPCDNwIbiM&list=PLIlj4TqlPMCFIKQqROQ9LQ8wLoZUktVDC">Watch gameplay</a>🎥
 </p>
 
